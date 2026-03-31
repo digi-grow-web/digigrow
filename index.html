@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiGrow Hyderabad | Digital Marketing & Website Development</title>
+  <meta name="description" content="Top Digital Marketing Agency in Hyderabad. Google Ads, Instagram Marketing, Local SEO & Website Development for salons, clinics, gyms & local businesses. Get more leads today!" />
+  <meta name="keywords" content="Digital Marketing in Hyderabad, Google Ads Hyderabad, Instagram Marketing Hyderabad, Local SEO Hyderabad, Website Development Hyderabad, Lead Generation Hyderabad" />
+  <meta name="author" content="DigiGrow Hyderabad" />
+  <meta property="og:title" content="DigiGrow Hyderabad | Digital Marketing & Website Development" />
+  <meta property="og:description" content="Get more customers for your local business with Google Ads, Instagram Marketing & Local SEO." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #0B1E3D;
+      --navy2:  #122952;
+      --green:  #00C67A;
+      --green2: #00A865;
+      --white:  #FFFFFF;
+      --offwhite: #F5F8FF;
+      --gray:   #6B7A99;
+      --lightgray: #E4EAF5;
+      --text:   #1A2B4A;
+      --radius: 14px;
+      --shadow: 0 8px 40px rgba(11,30,61,0.13);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: 'Syne', sans-serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── UTILITY ───────────────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 90px 0; }
+    .section-alt { background: var(--offwhite); }
+    .section-dark { background: var(--navy); color: var(--white); }
+    .tag {
+      display: inline-block;
+      background: rgba(0,198,122,0.12);
+      color: var(--green2);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 40px;
+      margin-bottom: 14px;
+    }
+    .section-title { font-size: clamp(30px, 4vw, 44px); color: var(--navy); margin-bottom: 14px; }
+    .section-dark .section-title { color: var(--white); }
+    .section-sub { color: var(--gray); font-size: 17px; max-width: 600px; }
+    .section-dark .section-sub { color: rgba(255,255,255,.65); }
+    .center { text-align: center; }
+    .center .section-sub { margin: 0 auto; }
+
+    /* ─── BUTTONS ────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: 8px;
+      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+      cursor: pointer; border: none; transition: all .22s ease;
+    }
+    .btn-green {
+      background: var(--green); color: var(--navy);
+      box-shadow: 0 4px 20px rgba(0,198,122,0.3);
+    }
+    .btn-green:hover { background: var(--green2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,198,122,0.4); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn-outline:hover { border-color: var(--green); color: var(--green); }
+    .btn-navy { background: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--navy2); transform: translateY(-2px); }
+    .btn-lg { padding: 17px 38px; font-size: 16px; }
+
+    /* ─── NAV ────────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(11,30,61,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); }
+    .logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,.75); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { display: flex; gap: 12px; align-items: center; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all .3s; }
+    .mobile-menu {
+      display: none; flex-direction: column; background: var(--navy2);
+      padding: 20px 24px; gap: 18px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,.85); font-size: 16px; font-weight: 500; }
+    .mobile-menu a:hover { color: var(--green); }
+    @media(max-width:860px){
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    #home {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2347 60%, #0f2d56 100%);
+      min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg-dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+    .hero-blob {
+      position: absolute; right: -120px; top: 50%; transform: translateY(-50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,198,122,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 700px;
+      padding: 100px 24px 80px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,198,122,0.15); border: 1px solid rgba(0,198,122,0.3);
+      color: var(--green); font-size: 13px; font-weight: 600;
+      padding: 6px 16px; border-radius: 40px; margin-bottom: 28px;
+    }
+    .hero-badge::before { content: '●'; font-size: 8px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 62px); color: var(--white);
+      font-weight: 800; margin-bottom: 20px; line-height: 1.1;
+    }
+    .hero h1 em { color: var(--green); font-style: normal; }
+    .hero-sub {
+      color: rgba(255,255,255,.65); font-size: 18px; margin-bottom: 14px;
+    }
+    .hero-services {
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 38px;
+    }
+    .hero-pill {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,.85); font-size: 13px; padding: 6px 16px; border-radius: 40px;
+    }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+      margin-top: 64px; padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--green); }
+    .stat-label { color: rgba(255,255,255,.55); font-size: 13px; margin-top: 4px; }
+
+    /* ─── SERVICES ───────────────────────────────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .service-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 36px 30px; border: 1.5px solid var(--lightgray);
+      transition: all .3s ease; position: relative; overflow: hidden;
+    }
+    .service-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: var(--green); transform: scaleX(0); transition: transform .3s ease;
+    }
+    .service-card:hover { border-color: var(--green); transform: translateY(-6px); box-shadow: var(--shadow); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-icon {
+      width: 56px; height: 56px; border-radius: 12px;
+      background: rgba(0,198,122,0.1); display: flex; align-items: center; justify-content: center;
+      font-size: 26px; margin-bottom: 20px;
+    }
+    .service-card h3 { font-size: 19px; color: var(--navy); margin-bottom: 10px; }
+    .service-card p { color: var(--gray); font-size: 15px; line-height: 1.6; }
+    .service-features { margin-top: 16px; list-style: none; }
+    .service-features li {
+      font-size: 14px; color: var(--text); padding: 5px 0;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .service-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+    /* ─── WHY US ─────────────────────────────────────────────── */
+    .why-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center; margin-top: 20px;
+    }
+    @media(max-width:760px){ .why-grid { grid-template-columns: 1fr; } }
+    .why-points { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+    .why-point {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .why-ico {
+      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+      background: rgba(0,198,122,0.12); display: flex; align-items: center;
+      justify-content: center; font-size: 22px;
+    }
+    .why-point h4 { font-size: 16px; color: var(--navy); margin-bottom: 4px; }
+    .why-point p { font-size: 14px; color: var(--gray); }
+    .why-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: 20px; padding: 40px; color: var(--white);
+    }
+    .metric-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 20px 24px; margin-bottom: 14px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .metric-label { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .metric-val { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 700; color: var(--green); }
+    .metric-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin-top: 8px; }
+    .metric-fill { height: 100%; background: var(--green); border-radius: 3px; }
+
+    /* ─── PRICING ────────────────────────────────────────────── */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .price-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1.5px solid var(--lightgray); padding: 40px 32px;
+      transition: all .3s ease; position: relative;
+    }
+    .price-card.popular {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green), var(--shadow);
+    }
+    .popular-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--green); color: var(--navy);
+      font-size: 12px; font-weight: 700; padding: 4px 18px; border-radius: 40px;
+    }
+    .price-tier { font-size: 13px; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: .08em; }
+    .price-amount {
+      font-family: 'Syne', sans-serif; font-size: 42px; font-weight: 800;
+      color: var(--navy); margin: 12px 0 4px;
+    }
+    .price-amount span { font-size: 18px; }
+    .price-period { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
+    .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+    .price-features li { font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .price-features li::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 15px; }
+    .price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+
+    /* ─── PORTFOLIO ──────────────────────────────────────────── */
+    .portfolio-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .portfolio-card {
+      border-radius: var(--radius); overflow: hidden;
+      border: 1.5px solid var(--lightgray); transition: all .3s;
+    }
+    .portfolio-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .port-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      padding: 32px 28px;
+    }
+    .port-category {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 8px;
+    }
+    .port-header h3 { font-size: 20px; color: var(--white); }
+    .port-body { padding: 24px 28px; background: var(--white); }
+    .port-metrics { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
+    .port-metric { text-align: center; }
+    .port-metric .val { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--green); }
+    .port-metric .lbl { font-size: 12px; color: var(--gray); }
+    .port-body p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────────── */
+    .testi-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 32px 28px;
+    }
+    .stars { color: #FFD600; font-size: 18px; margin-bottom: 14px; letter-spacing: 2px; }
+    .testi-card p { color: rgba(255,255,255,0.75); font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(0,198,122,0.2); display: flex; align-items: center;
+      justify-content: center; font-size: 20px;
+    }
+    .testi-name { font-weight: 600; color: var(--white); font-size: 15px; }
+    .testi-biz { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+    /* ─── ABOUT ──────────────────────────────────────────────── */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center;
+    }
+    @media(max-width:760px){ .about-grid { grid-template-columns: 1fr; } }
+    .about-text h2 { font-size: clamp(28px, 4vw, 40px); color: var(--navy); margin-bottom: 18px; }
+    .about-text p { color: var(--gray); font-size: 16px; margin-bottom: 16px; line-height: 1.75; }
+    .about-numbers { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 32px; }
+    .about-num .n { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--navy); }
+    .about-num .l { font-size: 13px; color: var(--gray); }
+    .about-visual {
+      background: linear-gradient(155deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: 20px; padding: 44px; color: var(--white); position: relative; overflow: hidden;
+    }
+    .about-visual::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(0,198,122,0.15);
+    }
+    .about-visual h3 { font-size: 22px; margin-bottom: 20px; }
+    .ab-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ab-list li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: rgba(255,255,255,0.8); }
+    .ab-list li::before { content: '→'; color: var(--green); font-weight: 700; font-size: 18px; }
+
+    /* ─── FAQ ────────────────────────────────────────────────── */
+    .faq-list { max-width: 760px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item {
+      border: 1.5px solid var(--lightgray); border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 20px 24px; font-weight: 600; font-size: 16px; color: var(--navy);
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; background: var(--white); transition: background .2s;
+    }
+    .faq-q:hover { background: var(--offwhite); }
+    .faq-q .arrow { color: var(--green); font-size: 20px; transition: transform .3s; flex-shrink: 0; }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s;
+      padding: 0 24px; background: var(--white);
+      font-size: 15px; color: var(--gray); line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 4px 24px 20px; }
+    .faq-item.open .arrow { transform: rotate(45deg); }
+
+    /* ─── CONTACT ────────────────────────────────────────────── */
+    #contact { background: var(--offwhite); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: start; margin-top: 48px;
+    }
+    @media(max-width:760px){ .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info h3 { font-size: 22px; color: var(--navy); margin-bottom: 20px; }
+    .contact-method {
+      display: flex; align-items: center; gap: 14px;
+      padding: 18px 20px; background: var(--white);
+      border-radius: 12px; border: 1.5px solid var(--lightgray);
+      margin-bottom: 14px; transition: border-color .2s;
+    }
+    .contact-method:hover { border-color: var(--green); }
+    .c-icon {
+      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 20px;
+    }
+    .c-icon.phone { background: rgba(0,198,122,0.1); }
+    .c-icon.wa { background: rgba(37,211,102,0.1); }
+    .c-label { font-size: 12px; color: var(--gray); }
+    .c-value { font-weight: 600; color: var(--navy); font-size: 15px; }
+    .wa-big {
+      display: flex; align-items: center; gap: 12px;
+      background: #25D366; color: white; border-radius: 12px;
+      padding: 16px 22px; margin-top: 20px; font-weight: 600; font-size: 15px;
+      transition: background .2s; cursor: pointer;
+    }
+    .wa-big:hover { background: #1ebe5d; }
+    .contact-form { background: var(--white); border-radius: var(--radius); padding: 36px; border: 1.5px solid var(--lightgray); }
+    .contact-form h3 { font-size: 20px; color: var(--navy); margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 7px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px; border: 1.5px solid var(--lightgray);
+      border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 15px;
+      color: var(--text); background: var(--white); outline: none; transition: border-color .2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--green);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-success {
+      display: none; background: rgba(0,198,122,0.1); border: 1px solid var(--green);
+      border-radius: 8px; padding: 14px 18px; color: var(--green2);
+      font-weight: 600; font-size: 15px; margin-top: 14px; text-align: center;
+    }
+
+    /* ─── STICKY WA ──────────────────────────────────────────── */
+    .wa-sticky {
+      position: fixed; bottom: 28px; right: 24px; z-index: 9999;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45); cursor: pointer;
+      transition: transform .2s, box-shadow .2s; animation: float 3s ease-in-out infinite;
+    }
+    .wa-sticky:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,0.6); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .wa-sticky svg { width: 32px; height: 32px; fill: white; }
+    .wa-tooltip {
+      position: absolute; right: 72px; top: 50%; transform: translateY(-50%);
+      background: var(--navy); color: white; font-size: 13px; font-weight: 500;
+      padding: 6px 14px; border-radius: 6px; white-space: nowrap; opacity: 0;
+      transition: opacity .2s; pointer-events: none;
+    }
+    .wa-sticky:hover .wa-tooltip { opacity: 1; }
+
+    /* ─── CTA BANNER ─────────────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      padding: 80px 24px; text-align: center;
+    }
+    .cta-banner h2 { font-size: clamp(28px, 4vw, 42px); color: var(--white); margin-bottom: 16px; }
+    .cta-banner p { color: rgba(255,255,255,0.6); font-size: 17px; margin-bottom: 36px; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer { background: #060f1f; color: rgba(255,255,255,0.55); padding: 50px 0 30px; }
+    .footer-inner { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 40px; }
+    .footer-brand { flex: 1; min-width: 220px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 12px; }
+    .footer-col { min-width: 140px; }
+    .footer-col h4 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 14px; text-transform: uppercase; letter-spacing: .06em; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 8px; transition: color .2s; }
+    .footer-col a:hover { color: var(--green); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+
+    /* ─── SCROLL ANIMATIONS ──────────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media(max-width:600px){
+      .section { padding: 64px 0; }
+      .hero-stats { gap: 28px; }
+      .pricing-grid, .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════════ -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Digi<span>Grow</span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:87902 21589" class="btn btn-outline" style="padding:10px 20px;font-size:13px;">📞 Call Now</a>
+      <a href="#contact" class="btn btn-green" style="padding:10px 20px;font-size:13px;">Free Consultation</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="tel:87902 21589" class="btn btn-green" style="width:fit-content;padding:10px 22px;">📞 87902 21589</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg-dots"></div>
+  <div class="hero-blob"></div>
+  <div class="hero-content hero">
+    <div class="hero-badge">🚀 Trusted by 50+ Hyderabad Businesses</div>
+    <h1>Get More Customers for Your Business with <em>Digital Marketing</em></h1>
+    <p class="hero-sub">We help local businesses in Hyderabad grow faster with data-driven strategies.</p>
+    <div class="hero-services">
+      <span class="hero-pill">📢 Google Ads</span>
+      <span class="hero-pill">📸 Instagram Marketing</span>
+      <span class="hero-pill">📍 Local SEO</span>
+      <span class="hero-pill">💻 Website Development</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-green btn-lg">Get Free Consultation →</a>
+      <a href="https://wa.me/919703523485?text=Hi%2C%20I%27m%20interested%20in%20your%20digital%20marketing%20services" target="_blank" class="btn btn-outline btn-lg">💬 WhatsApp Us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3x</div>
+        <div class="stat-label">Avg. Lead Growth</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">₹5K</div>
+        <div class="stat-label">Starting Budget</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24h</div>
+        <div class="stat-label">Campaign Launch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ════════════════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="center reveal">
+      <span class="tag">What We Do</span>
+      <h2 class="section-title">Services Designed to Get You More Leads</h2>
+      <p class="section-sub">We specialize in result-focused digital marketing for salons, clinics, gyms, real estate & all local businesses in Hyderabad.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">📢</div>
+        <h3>Google Ads (PPC)</h3>
+        <p>Appear at the top of Google when customers search for your service. Pay only for real clicks and leads.</p>
+        <ul class="service-features">
+          <li>Search, Display & Call Ads</li>
+          <li>Keyword research & targeting</li>
+          <li>Conversion tracking setup</li>
+          <li>Monthly performance reports</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📸</div>
+        <h3>Facebook & Instagram Ads</h3>
+        <p>Reach thousands of potential customers in your area with highly targeted social media campaigns.</p>
+        <ul class="service-features">
+          <li>Lead generation campaigns</li>
+          <li>Audience targeting & retargeting</li>
+          <li>Creative ad design included</li>
+          <li>WhatsApp & call integration</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📍</div>
+        <h3>Local SEO & Google Business</h3>
+        <p>Get found on Google Maps and local search results when nearby customers look for your services.</p>
+        <ul class="service-features">
+          <li>Google Business Profile setup</li>
+          <li>Local keyword optimization</li>
+          <li>Review management strategy</li>
+          <li>Local citation building</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Professional, fast-loading websites built to convert visitors into leads and customers for your business.</p>
+        <ul class="service-features">
+          <li>Mobile-responsive design</li>
+          <li>SEO-optimized structure</li>
+          <li>WhatsApp & call CTAs</li>
+          <li>Fast loading performance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ══════════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <span class="tag">Why Choose Us</span>
+        <h2 class="section-title">We Focus on Results, Not Just Impressions</h2>
+        <p class="section-sub">We don't just run ads — we build lead generation systems that consistently bring customers to your business.</p>
+        <div class="why-points">
+          <div class="why-point reveal">
+            <div class="why-ico">🎯</div>
+            <div>
+              <h4>Hyderabad-Focused Expertise</h4>
+              <p>We understand local market dynamics and customer behavior in Hyderabad to give your business an edge.</p>
+            </div>
+          </div>
+          <div class="why-point reveal">
+            <div class="why-ico">📊</div>
+            <div>
+              <h4>Transparent Reporting</h4>
+              <p>Monthly reports showing exactly how many leads, calls and clicks your campaigns generated.</p>
+            </div>
+          </div>
+          <div class="why-point reveal">
+            <div class="why-ico">⚡</div>
+            <div>
+              <h4>Quick Setup & Fast Results</h4>
+              <p>Your campaigns go live within 24 hours and you start seeing leads within the first week.</p>
+            </div>
+          </div>
+          <div class="why-point reveal">
+            <div class="why-ico">💰</div>
+            <div>
+              <h4>Affordable for Local Businesses</h4>
+              <p>No bloated agency fees. Our packages start at just ₹5,000/month with no hidden charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal">
+        <h3>📈 Real Results for Local Businesses</h3>
+        <div class="metric-card">
+          <div>
+            <div class="metric-label">Salon in Banjara Hills</div>
+            <div class="metric-bar"><div class="metric-fill" style="width:85%"></div></div>
+          </div>
+          <div class="metric-val">+85%</div>
+        </div>
+        <div class="metric-card">
+          <div>
+            <div class="metric-label">Dental Clinic - Lead Growth</div>
+            <div class="metric-bar"><div class="metric-fill" style="width:120%"></div></div>
+          </div>
+          <div class="metric-val">3x</div>
+        </div>
+        <div class="metric-card">
+          <div>
+            <div class="metric-label">Gym - New Memberships</div>
+            <div class="metric-bar"><div class="metric-fill" style="width:60%"></div></div>
+          </div>
+          <div class="metric-val">+60</div>
+        </div>
+        <div class="metric-card">
+          <div>
+            <div class="metric-label">Real Estate - Enquiries</div>
+            <div class="metric-bar"><div class="metric-fill" style="width:92%"></div></div>
+          </div>
+          <div class="metric-val">+200%</div>
+        </div>
+        <a href="#contact" class="btn btn-green" style="margin-top:24px;width:100%;justify-content:center;">Get Similar Results →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ══════════════════════════════════════════════════ -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="center reveal">
+      <span class="tag">Pricing</span>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-sub">No hidden fees. No long-term lock-ins. Pick the plan that fits your business goals.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Basic -->
+      <div class="price-card reveal">
+        <div class="price-tier">Basic</div>
+        <div class="price-amount"><span>₹</span>8,000</div>
+        <div class="price-period">per month + ad budget (*excluded)</div>
+        <ul class="price-features">
+          <li>1 Platform (Google OR Instagram)</li>
+          <li>Campaign setup & management</li>
+          <li>Basic audience targeting</li>
+          <li>Monthly performance report</li>
+          <li>WhatsApp support</li>
+          <li>Ideal for: Startups & solo businesses</li>
+        </ul>
+        <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <!-- Standard -->
+      <div class="price-card popular reveal">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="price-tier">Standard</div>
+        <div class="price-amount"><span>₹</span>12,000</div>
+        <div class="price-period">per month + ad budget (*excluded)</div>
+        <ul class="price-features">
+          <li>2 Platforms (Google + Instagram)</li>
+          <li>Advanced targeting & retargeting</li>
+          <li>Ad creative design included</li>
+          <li>Google Business optimization</li>
+          <li>Bi-weekly reports & calls</li>
+          <li>WhatsApp + Call lead routing</li>
+          <li>Ideal for: Growing local businesses</li>
+        </ul>
+        <a href="#contact" class="btn btn-green" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <!-- Premium -->
+      <div class="price-card reveal">
+        <div class="price-tier">Premium</div>
+        <div class="price-amount"><span>₹</span>20,000</div>
+        <div class="price-period">per month + ad budget (*excluded)</div>
+        <ul class="price-features">
+          <li>All platforms + Local SEO</li>
+          <li>Website development included</li>
+          <li>Full content creation & design</li>
+          <li>Dedicated account manager</li>
+          <li>Weekly strategy calls</li>
+          <li>CRM & lead tracking setup</li>
+          <li>Ideal for: Clinics, Real Estate & Gyms</li>
+        </ul>
+        <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+    </div>
+    <p class="center" style="margin-top:28px;color:var(--gray);font-size:14px;">Not sure which plan? <a href="#contact" style="color:var(--green);font-weight:600;">Talk to us free</a> — we'll recommend what's best for your business.</p>
+  </div>
+</section>
+
+<!-- ═══ PORTFOLIO ════════════════════════════════════════════════ -->
+<section id="portfolio" class="section section-alt">
+  <div class="container">
+    <div class="center reveal">
+      <span class="tag">Case Studies</span>
+      <h2 class="section-title">Results We've Delivered</h2>
+      <p class="section-sub">Real numbers from real businesses in Hyderabad. Here's how we helped them grow.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="port-header">
+          <div class="port-category">💇 Beauty Salon</div>
+          <h3>Happy's Beauty Academy</h3>
+        </div>
+        <div class="port-body">
+          <div class="port-metrics">
+            <div class="port-metric"><div class="val">120</div><div class="lbl">Leads/month</div></div>
+            <div class="port-metric"><div class="val">₹42</div><div class="lbl">Cost/Lead</div></div>
+            <div class="port-metric"><div class="val">3.2x</div><div class="lbl">ROI</div></div>
+          </div>
+          <p>Ran Instagram lead generation ads targeting women aged 20–45 in a 5km radius. Bookings increased by 85% within 45 days of campaign launch.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="port-header">
+          <div class="port-category">⚖️Law Firm</div>
+          <h3>Legal Capital</h3>
+        </div>
+        <div class="port-body">
+          <div class="port-metrics">
+            <div class="port-metric"><div class="val">80</div><div class="lbl">Calls/month</div></div>
+            <div class="port-metric"><div class="val">₹65</div><div class="lbl">Cost/Lead</div></div>
+            <div class="port-metric"><div class="val">4x</div><div class="lbl">ROI</div></div>
+          </div>
+         <p>Google Search Ads targeting "law firm near me" & "legal consultation Hyderabad". New client enquiries tripled in 60 days with a tight ₹8,000/month ad budget.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="port-header">
+          <div class="port-category">🏢 Manufacturing Industry</div>
+          <h3>Krishwin uPVC Profiles</h3>
+        </div>
+        <div class="port-body">
+          <div class="port-metrics">
+            <div class="port-metric"><div class="val">60+</div><div class="lbl">Customers</div></div>
+            <div class="port-metric"><div class="val">₹55</div><div class="lbl">Cost/Lead</div></div>
+            <div class="port-metric"><div class="val">5x</div><div class="lbl">ROI</div></div>
+          </div>
+          <p>Facebook & Instagram ads promoting custom UPVC doors & windows solutions. 60 new client orders secured in the first month — highest sales month in 2 years for the client.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="port-header">
+          <div class="port-category">🏠 Real Estate</div>
+          <h3>Property Search Capital</h3>
+        </div>
+        <div class="port-body">
+          <div class="port-metrics">
+            <div class="port-metric"><div class="val">200%</div><div class="lbl">More Enquiries</div></div>
+            <div class="port-metric"><div class="val">₹120</div><div class="lbl">Cost/Lead</div></div>
+            <div class="port-metric"><div class="val">8x</div><div class="lbl">ROI</div></div>
+          </div>
+          <p>Combined Google Ads + Facebook retargeting for a real estate project in Tellapur. Enquiries grew 200% with qualified buyer leads calling directly from the ad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ════════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="center reveal">
+      <span class="tag">Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-sub">Real feedback from local business owners we've worked with across Hyderabad.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Within 30 days of starting Google Ads, we started getting 20–25 new enquiries every month!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div>
+            <div class="testi-name">Vanaja</div>
+            <div class="testi-biz">Happy's Beauty Academy, Glamour Salon</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Our client enquiries tripled in just 60 days with Google Ads. Highly effective and budget-friendly results."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">⚖️</div>
+          <div>
+            <div class="testi-name">Ramesh</div>
+            <div class="testi-biz">Legal Capital, Law Firm</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We closed 60 new orders in the first month through social media ads. Our best sales performance in 2 years!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">🏢</div>
+          <div>
+            <div class="testi-name">Shreya</div>
+            <div class="testi-biz">Krishwin uPVC, Manufacturing Unit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ════════════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="tag">About Us</span>
+        <h2>Helping Hyderabad's Local Businesses Win Online</h2>
+        <p>We are a results-driven digital marketing team based in Hyderabad, dedicated to helping small and local businesses compete online and generate consistent leads.</p>
+        <p>Whether you run a salon, clinic, gym, real estate firm, or any local service — we build data-driven marketing strategies that bring real customers to your door, not just vanity metrics.</p>
+        <p>Our focus is simple: <strong>more leads, more calls, more customers</strong> — at a price that makes sense for local businesses.</p>
+        <div class="about-numbers">
+          <div class="about-num"><div class="n">50+</div><div class="l">Clients Served</div></div>
+          <div class="about-num"><div class="n">3+</div><div class="l">Years Experience</div></div>
+          <div class="about-num"><div class="n">₹50L+</div><div class="l">Ad Spend Managed</div></div>
+        </div>
+        <a href="#contact" class="btn btn-green" style="margin-top:32px;">Work With Us →</a>
+      </div>
+      <div class="about-visual reveal">
+        <h3>Our Approach to Your Growth</h3>
+        <ul class="ab-list">
+          <li>Understand your business & target customers</li>
+          <li>Build a custom ad strategy for your area</li>
+          <li>Launch campaigns within 24 hours</li>
+          <li>Optimize weekly based on data</li>
+          <li>Report results transparently every month</li>
+          <li>Scale what works, cut what doesn't</li>
+        </ul>
+        <div style="margin-top:32px;background:rgba(0,198,122,0.1);border-radius:10px;padding:18px 20px;">
+          <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:4px;">Industries We Serve</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.8;">
+            Salons & Spas · Dental & Medical Clinics · Gyms & Fitness · Real Estate · Restaurants · Law Firms · Coaching Centers · Hotels · Automobile Services
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ══════════════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="center reveal">
+      <span class="tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Common questions from local business owners before getting started.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How quickly will I see results from digital marketing?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">Google Ads and Instagram Ads can start generating leads within the first 3–7 days of launch. SEO takes 2–3 months to show significant results. Most of our clients see a clear improvement in enquiries within the first 2–4 weeks.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What is the minimum budget required to start?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">Our management fee starts at ₹5,000/month. In addition, you'll need an ad budget (we recommend a minimum of ₹5,000–₹10,000/month for ads on Google or Instagram). We work with you to maximize every rupee spent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you work with businesses outside Hyderabad?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">Yes! While we have deep expertise in the Hyderabad and Telangana market, we work with local businesses across India. Our strategies are tailored to your specific city and target audience.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Will I get reports and updates on my campaigns?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">Absolutely. We provide monthly reports showing your leads, calls, clicks, cost-per-lead, and ROI. Standard and Premium clients get bi-weekly or weekly calls to review performance and strategy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is there a contract or minimum commitment period?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">We recommend a 3-month commitment for best results (ads need time to optimize). However, we don't lock you into long-term contracts — you can pause or cancel with 30 days notice.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do I need to have a website to start running ads?
+          <span class="arrow">+</span>
+        </div>
+        <div class="faq-a">Not necessarily. We can run WhatsApp and call-based lead generation campaigns without a website. However, a good landing page significantly improves results — and we can build one for you as part of our Premium plan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══════════════════════════════════════════════ -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready to Get More Customers in Hyderabad?</h2>
+    <p>Book a free 30-minute strategy call. No commitments, no pressure — just actionable advice for your business.</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn btn-green btn-lg">Get Free Consultation →</a>
+      <a href="https://wa.me/919703523485?text=Hi%2C%20I%27d%20like%20a%20free%20consultation%20for%20my%20business" target="_blank" class="btn btn-outline btn-lg">💬 WhatsApp Us Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ══════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="center reveal" style="padding-top:90px;">
+      <span class="tag">Contact Us</span>
+      <h2 class="section-title">Let's Grow Your Business Together</h2>
+      <p class="section-sub">Reach out today for a free consultation. We'll analyze your business and suggest the best strategy.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <a href="tel:87902 21589" class="contact-method">
+          <div class="c-icon phone">📞</div>
+          <div>
+            <div class="c-label">Call Us Directly</div>
+            <div class="c-value">87902 21589</div>
+          </div>
+        </a>
+        <a href="tel:9703523485" class="contact-method">
+          <div class="c-icon phone">📞</div>
+          <div>
+            <div class="c-label">Alternate Number</div>
+            <div class="c-value">97035 23485</div>
+          </div>
+        </a>
+        <a href="https://wa.me/919703523485?text=Hi%2C%20I%27m%20interested%20in%20your%20digital%20marketing%20services" target="_blank" class="wa-big">
+          <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp — Fast Response
+        </a>
+        <div style="margin-top:24px;padding:20px;background:var(--white);border-radius:12px;border:1.5px solid var(--lightgray);">
+          <div style="font-size:13px;color:var(--gray);margin-bottom:8px;">📍 Location</div>
+          <div style="font-weight:600;color:var(--navy);">Hyderabad, Telangana, India</div>
+          <div style="font-size:13px;color:var(--gray);margin-top:8px;">⏰ Mon–Sat: 9:00 AM – 7:00 PM</div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3>Send Us a Message</h3>
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" id="fname" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="fphone" placeholder="e.g. 9876543210" required />
+        </div>
+        <div class="form-group">
+          <label>Your Business Type</label>
+          <select id="fbiz">
+            <option value="">Select your business type</option>
+            <option>Salon / Spa</option>
+            <option>Dental / Medical Clinic</option>
+            <option>Gym / Fitness Center</option>
+            <option>Real Estate</option>
+            <option>Restaurant / Cafe</option>
+            <option>Coaching / Education</option>
+            <option>Other Local Business</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="fmsg" placeholder="Tell us about your business and what you're looking to achieve..."></textarea>
+        </div>
+        <button class="btn btn-green btn-lg" style="width:100%;justify-content:center;" onclick="submitForm()">Send Message & Get Free Consultation →</button>
+        <div class="form-success" id="formSuccess">✅ Thank you! We'll contact you within 24 hours.</div>
+      </div>
+    </div>
+    <div style="padding-bottom:90px;"></div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Digi<span>Grow</span></div>
+        <p>Helping local businesses in Hyderabad get more customers through Google Ads, Instagram Marketing, Local SEO, and Website Development.</p>
+        <div style="margin-top:16px;display:flex;gap:10px;">
+          <a href="https://wa.me/919703523485" target="_blank" style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 14px;color:rgba(255,255,255,0.7);font-size:13px;">💬 WhatsApp</a>
+          <a href="tel:87902 21589" style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 14px;color:rgba(255,255,255,0.7);font-size:13px;">📞 Call</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Google Ads</a>
+        <a href="#services">Instagram Ads</a>
+        <a href="#services">Local SEO</a>
+        <a href="#services">Website Development</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#portfolio">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:87902 21589">📞 87902 21589</a>
+        <a href="tel:9703523485">📞 97035 23485</a>
+        <a href="https://wa.me/919703523485" target="_blank">💬 WhatsApp Chat</a>
+        <a>📍 Hyderabad, India</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 DigiGrow Hyderabad. All rights reserved.</span>
+      <span>Digital Marketing Agency in Hyderabad | Local SEO | Google Ads</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ STICKY WHATSAPP ══════════════════════════════════════════ -->
+<a class="wa-sticky" href="https://wa.me/919703523485?text=Hi%2C%20I%27m%20interested%20in%20your%20digital%20marketing%20services" target="_blank" aria-label="Chat on WhatsApp">
+  <div class="wa-tooltip">Chat with us!</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Form submission
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    const msg = encodeURIComponent(`Hi DigiGrow! My name is ${name}. Phone: ${phone}. Business: ${document.getElementById('fbiz').value || 'Not specified'}. Message: ${document.getElementById('fmsg').value || 'Looking for digital marketing services.'}`);
+    window.open(`https://wa.me/919703523485?text=${msg}`, '_blank');
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth active nav
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,0.18)' : 'none';
+  });
+</script>
+</body>
+</html>
